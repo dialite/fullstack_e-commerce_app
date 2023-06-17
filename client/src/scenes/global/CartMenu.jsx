@@ -74,6 +74,7 @@ const CartMenu = () => {
                     />
                   </Box>
                   <Box flex="1 1 40%">
+                    {/* Item Name */}
                     <FlexBox mb="5px">
                       <Typography fontWeight="bold">
                         {item.attributes.name}
@@ -87,11 +88,39 @@ const CartMenu = () => {
                       </IconButton>
                     </FlexBox>
                     <Typography>{item.attributes.shortDescription}</Typography>
+
+                    {/* Amount of items  */}
                     <FlexBox m="15px 0">
-                      <Box></Box>
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        border={`1.5px solid ${shades.neutral[500]}`}
+                      >
+                        <IconButton
+                          onClick={() =>
+                            dispatch(decreaseCount({ id: item.id }))
+                          }
+                        >
+                          <RemoveIcon />
+                        </IconButton>
+                        <Typography>{item.count}</Typography>
+                        <IconButton
+                          onClick={() =>
+                            dispatch(increaseCount({ id: item.id }))
+                          }
+                        >
+                          <AddIcon />
+                        </IconButton>
+                      </Box>
                     </FlexBox>
+
+                    {/* Price */}
+                    <Typography fontWeight="bold">
+                      ${item.attributes.price}
+                    </Typography>
                   </Box>
                 </FlexBox>
+                <Divider />
               </Box>
             ))}
           </Box>

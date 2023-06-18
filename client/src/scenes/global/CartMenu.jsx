@@ -32,7 +32,7 @@ const CartMenu = () => {
   // Overlay concept of condition from me
   return (
     <Box
-      display={isCartOpen && "block"}
+      display={isCartOpen ? "block" : "none"}
       backgroundColor="rgba(0, 0, 0, 0.4)"
       position="fixed"
       zIndex={10}

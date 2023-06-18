@@ -55,6 +55,7 @@ const Navbar = () => {
             <PersonOutline />
           </IconButton>
 
+          {/* Badge Count */}
           <Badge
             badgeContent={cart.length}
             color="secondary"

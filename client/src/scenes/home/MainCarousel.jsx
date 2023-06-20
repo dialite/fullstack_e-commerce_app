@@ -17,7 +17,7 @@ const heroTextureImports = importAll(
 );
 
 const MainCarousel = () => {
-  const isNonMobile = useMediaQuery("(min-width:600px");
+  const isNonMobile = useMediaQuery("(min-width:600px)");
   return (
     <Carousel
       infiniteLoop={true}

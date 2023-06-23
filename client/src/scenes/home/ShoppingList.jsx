@@ -6,7 +6,7 @@ import { setItems } from "../../state";
 
 const ShoppingList = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = useState; //Value for filter function
+  const [value, setValue] = useState("all"); //Value for filter function
   const items = useSelector((state) => state.cart.items);
   const isNonMobile = useMediaQuery("(min-width:600px)");
   console.log("items", items);

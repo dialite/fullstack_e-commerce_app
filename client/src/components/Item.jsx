@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { IconButton, Box, Typography, useTheme, Button } from "@mui/material";
+import { IconButton, Box, Typography, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
@@ -8,13 +8,13 @@ import { addToCart } from "../state";
 import { useNavigate } from "react-router-dom";
 
 const Item = ({ item, width }) => {
-  const navigate = useNavigate;
-  const dispatch = useDispatch;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [count, setCount] = useState(1); // What will be added to the cart
   const [isHovered, setIsHovered] = useState(false);
-  const {
-    palette: { neutral },
-  } = useTheme();
+  // const {
+  //   palette: { neutral },
+  // } = useTheme();
 
   const { category, price, name, image } = item.attributes;
   const {
@@ -43,10 +43,10 @@ const Item = ({ item, width }) => {
           style={{ cursor: "pointer" }}
         />
         <Box
-          display={isHovered ? "blocked" : "none"}
+          display={isHovered ? "block" : "none"}
           position="absolute"
           buttom="10%"
-          left="10%"
+          left="0"
           width="100%"
           padding="0 5%"
         >
@@ -72,7 +72,7 @@ const Item = ({ item, width }) => {
               onClick={() => {
                 dispatch(addToCart({ item: { ...item, count } }));
               }}
-              xs={{ backgroundColor: shades.primary[300], color: "white" }}
+              sx={{ backgroundColor: shades.primary[300], color: "white" }}
             >
               Add to Cart
             </Button>
@@ -81,10 +81,10 @@ const Item = ({ item, width }) => {
       </Box>
 
       <Box mt="3px">
-        <Typography variant="subtitle2" color={neutral.dark}>
+        <Typography variant="subtitle2">
           {/* Regular expression for the category that first takes all the capital letters and preceed it with $ then converts only the first letter to capital */}
           {category
-            .replace(/([A-Z])/g, "$1")
+            .replace(/([A-Z])/g, " $1")
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>

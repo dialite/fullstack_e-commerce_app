@@ -6,6 +6,7 @@ import Checkout from "./scenes/checkout/Checkout";
 import Confirmation from "./scenes/checkout/Confirmation";
 import Navbar from "./scenes/global/Navbar";
 import CartMenu from "./scenes/global/CartMenu";
+import Footer from "./scenes/global/Footer";
 
 // Provided for react-router that enables starting at the top of new page
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ function App() {
           <Route path="checkout/success" element={<Confirmation />} />
         </Routes>
         <CartMenu />
+        <Footer />
       </BrowserRouter>
     </div>
   );

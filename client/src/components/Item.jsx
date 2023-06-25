@@ -48,6 +48,7 @@ const Item = ({ item, width }) => {
           buttom="10%"
           left="0"
           width="100%"
+          top="80%"
           padding="0 5%"
         >
           <Box display="flex" justifyContent="space-between">

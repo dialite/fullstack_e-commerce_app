@@ -26,7 +26,32 @@ const Footer = () => {
           >
             ECOMMER
           </Typography>
-          <div></div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed
+            faucibus turpis in. Tempus urna et pharetra pharetra massa massa
+            ultricies mi. Dui nunc mattis enim ut tellus elementum. Tristique
+            risus nec feugiat in fermentum posuere urna nec tincidunt.
+          </div>
+        </Box>
+        <Box>
+          <Typography variant="h4" fontWeight="bold" mb="30px">
+            About Us
+          </Typography>
+          <Typography mb="30px">Careers</Typography>
+          <Typography mb="30px">Our Stores</Typography>
+          <Typography mb="30px">Terms & Conditions</Typography>
+          <Typography mb="30px">Privacy Policy</Typography>
+        </Box>
+
+        <Box>
+          <Typography variant="h4" fontWeight="bold" mb="30px">
+            Customer Care
+          </Typography>
+          <Typography mb="30px">Help Center</Typography>
+          <Typography mb="30px">Track Your Order</Typography>
+          <Typography mb="30px">Corporate & Bulk Purchasing</Typography>
+          <Typography mb="30px">Returns & Refunds</Typography>
         </Box>
       </Box>
     </Box>

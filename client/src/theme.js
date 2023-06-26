@@ -39,7 +39,7 @@ export const shades = {
 };
 
 export const theme = createTheme({
-  pallete: {
+  palette: {
     primary: {
       main: shades.primary[500],
     },

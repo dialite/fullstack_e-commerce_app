@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { IconButton, Box, Typography, Button } from "@mui/material";
+import { IconButton, Box, Typography, useTheme, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
@@ -12,9 +12,9 @@ const Item = ({ item, width }) => {
   const dispatch = useDispatch();
   const [count, setCount] = useState(1); // What will be added to the cart
   const [isHovered, setIsHovered] = useState(false);
-  // const {
-  //   palette: { neutral },
-  // } = useTheme();
+  const {
+    palette: { neutral },
+  } = useTheme();
 
   const { category, price, name, image } = item.attributes;
   const {
@@ -82,7 +82,7 @@ const Item = ({ item, width }) => {
       </Box>
 
       <Box mt="3px">
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle2" color={neutral.dark}>
           {/* Regular expression for the category that first takes all the capital letters and preceed it with $ then converts only the first letter to capital */}
           {category
             .replace(/([A-Z])/g, " $1")

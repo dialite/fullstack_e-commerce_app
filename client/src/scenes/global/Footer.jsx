@@ -53,6 +53,17 @@ const Footer = () => {
           <Typography mb="30px">Corporate & Bulk Purchasing</Typography>
           <Typography mb="30px">Returns & Refunds</Typography>
         </Box>
+
+        <Box width="clamp(20%, 25%, 30%)">
+          <Typography variant="h4" fontWeight="bold" mb="30px">
+            Contact Us
+          </Typography>
+          <Typography mb="30px">
+            Federal Housing Authority, Lugbe, Abuja
+          </Typography>
+          <Typography mb="30px">Email: everythingeveryday@gmail.com</Typography>
+          <Typography mb="30px">+234803482234</Typography>
+        </Box>
       </Box>
     </Box>
   );

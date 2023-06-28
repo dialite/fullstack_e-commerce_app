@@ -119,7 +119,7 @@ const Checkout = () => {
             handleChange,
             handleSubmit,
             setFieldValue,
-          }) => {
+          }) => (
             <form onSubmit={handleSubmit}>
               {isFirstStep && (
                 <Shipping
@@ -131,8 +131,8 @@ const Checkout = () => {
                   setFieldValue={setFieldValue}
                 />
               )}
-            </form>;
-          }}
+            </form>
+          )}
         </Formik>
       </Box>
     </Box>

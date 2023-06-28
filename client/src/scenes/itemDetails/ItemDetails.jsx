@@ -53,7 +53,7 @@ const ItemDetails = () => {
           <img
             alt={item?.name}
             width="100%"
-            height="10%"
+            height="100%"
             src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             style={{ objectFit: "contain" }}
           />
@@ -68,7 +68,7 @@ const ItemDetails = () => {
 
           <Box m="65px 0 25px 0">
             <Typography variant="h3">{item?.attributes?.name}</Typography>
-            <Typography>{item?.attributes?.price}</Typography>
+            <Typography>${item?.attributes?.price}</Typography>
             <Typography sx={{ mt: "20px" }}>
               {item?.attributes?.longDescription}
             </Typography>
